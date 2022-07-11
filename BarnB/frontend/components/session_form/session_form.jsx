@@ -4,7 +4,6 @@ class SessionForm extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      username: '',
       password: '',
       fname: '',
       lname: '',
@@ -39,28 +38,20 @@ class SessionForm extends React.Component{
 
 
   render() {
-    const email = this.props.formType === 'signup' ? (
-      <label>Email:
-      <input type="text"
-      value={this.state.email}
-      onChange={this.update('email')} />
-      </label>
-      ) : (<div></div>)
-
     const lname = this.props.formType === 'signup' ? (
       <label>Last name:
-      <input type="text"
-      value={this.state.lname}
-      onChange={this.update('lname')} />
+        <input type="text"
+        value={this.state.lname}
+        onChange={this.update('lname')} />
       </label>
       
     ) : (<div></div>)
 
     const fname = this.props.formType === 'signup' ? (
       <label>First name:
-      <input type="text"
-      value={this.state.fname}
-      onChange={this.update('fname')} />
+        <input type="text"
+        value={this.state.fname}
+        onChange={this.update('fname')} />
       </label>
       
     ) : (<div></div>)
@@ -73,43 +64,17 @@ class SessionForm extends React.Component{
           Please {this.props.formType} or {this.props.navLink}
           {this.renderErrors()}
           <div className="login-form">
-            <br/>
-              {/* {this.formType === 'signup' ? (
-                <label>Email:
-                  <input type="text"
-                  value={this.state.email}
-                  onChange={this.update('email')} />
-                </label>
-              ): (<div></div>)} */}
-              {email}
-              <br />
               {fname}
               <br />
               {lname}
               <br />
-            <label>Username:
+            <label>Email:
               <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
+                value={this.state.email}
+                onChange={this.update('email')}
               />
             </label>
             <br/>
-              {/* {this.formType === 'signup' ? (
-                <label>First Name:
-                  <input type="text"
-                  value={this.state.fname}
-                  onChange={this.update('fname')} />
-                  </label>
-                ): (<div></div>)} */}
-                <br />
-              {/* {this.formType === 'signup' ? (
-                <label>Last name:
-                  <input type="text"
-                  value={this.state.lname}
-                  onChange={this.update('lname')} />
-                </label>
-              ): (<div></div>)} */}
-              <br />
             <label>Password:
               <input type="password"
                 value={this.state.password}
