@@ -31,3 +31,4 @@ bundle.js
 bundle.js.map
 
 bundle.js*
+/public/assests
