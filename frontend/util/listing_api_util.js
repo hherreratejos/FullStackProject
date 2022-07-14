@@ -1,15 +1,14 @@
 
-export const fetchListings = data => {
+export const fetchListings = () => {
   return $.ajax({
     method: 'GET',
-    url: 'api/listings',
-    data
+    url: '/api/listings',
   });
 }
 
 export const fetchListing = id => {
   return $.ajax({
     method: 'GET',
-    url: `api/listings/${id}`,
+    url: `/api/listings/${id}`,
   });
 }

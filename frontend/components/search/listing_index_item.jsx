@@ -1,7 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-import ListingShowContainer from '../listing_show/listing_show_container';
 
 class IndexItem extends React.Component{
   constructor(props){
@@ -14,8 +13,17 @@ class IndexItem extends React.Component{
   }
 
   render() {
+    const { title, address, state, city, zipcode, beds, price } = this.props.listing
     return(
-      hello
+      <div>
+        <p>Title: {title}</p>
+        <p>Address: {address}</p>
+        <p>State: {state}</p>
+        <p>City: {city}</p>
+        <p>Zipcode: {zipcode}</p>
+        <p>Numbert of beds: {beds}</p>
+        <p>Price per night: {price}</p>
+      </div>
     )
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SessionForm extends React.Component{
+class SignupForm extends React.Component{
   constructor(props){
     super(props);
     this.state = {
@@ -10,6 +10,10 @@ class SessionForm extends React.Component{
       email: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  componentWillUnmount(){
+    this.props.removeSessionErrors()
   }
 
   update(field) {
@@ -38,24 +42,6 @@ class SessionForm extends React.Component{
 
 
   render() {
-    const lname = this.props.formType === 'signup' ? (
-      <label>Last name:
-        <input type="text"
-        value={this.state.lname}
-        onChange={this.update('lname')} />
-      </label>
-      
-    ) : (<div></div>)
-
-    const fname = this.props.formType === 'signup' ? (
-      <label>First name:
-        <input type="text"
-        value={this.state.fname}
-        onChange={this.update('fname')} />
-      </label>
-      
-    ) : (<div></div>)
-
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
@@ -64,10 +50,18 @@ class SessionForm extends React.Component{
           Please {this.props.formType} or {this.props.navLink}
           {this.renderErrors()}
           <div className="login-form">
-              {fname}
-              <br />
-              {lname}
-              <br />
+            <label>First name:
+              <input type="text"
+              value={this.state.fname}
+              onChange={this.update('fname')} />
+            </label>
+            <br />
+            <label>Last name:
+              <input type="text"
+              value={this.state.lname}
+              onChange={this.update('lname')} />
+            </label>
+            <br />
             <label>Email:
               <input type="text"
                 value={this.state.email}
@@ -90,4 +84,4 @@ class SessionForm extends React.Component{
   }
 }
 
-export default SessionForm;
+export default SignupForm;
