@@ -9,7 +9,7 @@ User.delete_all
 Listing.delete_all
 
 l1 = Listing.create!(
-  title: 'cool place',
+  title: 'Cool spacious place with lots of computers',
   address: '825 Battery St',
   lat: 37.798697,
   lng: -122.401240,
@@ -21,7 +21,7 @@ l1 = Listing.create!(
 )
 
 l2 = Listing.create!(
-  title: 'cooler place',
+  title: 'Small Studio',
   address: '2123 Franklin St',
   lat: 37.794124,
   lng: -122.424955,
@@ -42,6 +42,18 @@ l3 = Listing.create!(
   zipcode: 94116,
   beds: 7,
   price: 130
+)
+
+l4 = Listing.create!(
+  title: 'Big house, near BART',
+  address: '331 Anza St',
+  lat: 37.780226,
+  lng: -122.449960,
+  state: 'California',
+  city: 'San Francisco',
+  zipcode: 94118,
+  beds: 4,
+  price: 270
 )
 
 u1 = User.create!(

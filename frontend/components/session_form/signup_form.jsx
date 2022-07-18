@@ -47,7 +47,6 @@ class SignupForm extends React.Component{
         <form onSubmit={this.handleSubmit} className="login-form-box">
           Welcome to BarnB!
           <br/>
-          Please {this.props.formType} or {this.props.navLink}
           {this.renderErrors()}
           <div className="login-form">
             <label>First name:

@@ -13,16 +13,16 @@ class IndexItem extends React.Component{
   }
 
   render() {
-    const { title, address, state, city, zipcode, beds, price } = this.props.listing
+    const { id, title, address, state, city, zipcode, beds, price } = this.props.listing
     return(
-      <div>
-        <p>Title: {title}</p>
-        <p>Address: {address}</p>
-        <p>State: {state}</p>
-        <p>City: {city}</p>
-        <p>Zipcode: {zipcode}</p>
-        <p>Numbert of beds: {beds}</p>
-        <p>Price per night: {price}</p>
+      <div className='listing' onClick = {() => 
+        this.props.history.push(`/listings/${id}`)
+      }>
+        <div className='index-img'></div>
+        <p>{address}, {state}</p>
+        <br />
+        <br />
+        <div className='listing-price'>${price}/night</div>
       </div>
     )
   }

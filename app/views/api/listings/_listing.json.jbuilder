@@ -1,1 +1,1 @@
-json.extract! listing, :title, :address, :state, :city, :zipcode, :beds, :price
+json.extract! listing, :id, :title, :address, :state, :city, :zipcode, :beds, :price

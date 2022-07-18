@@ -32,3 +32,6 @@ bundle.js.map
 
 bundle.js*
 /public/assests
+
+# Ignore application configuration
+/config/application.yml

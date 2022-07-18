@@ -5,7 +5,6 @@ import {
 
 const listingsReducer = (state = {}, action) => {
   Object.freeze(state);
-  console.log('action', action)
   switch (action.type) {
     case RECEIVE_LISTINGS:
       return action.listings;

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 
 
-const Greeting = ({ currentUser, logout, login }) => {
+const Greeting = ({ currentUser, logout, login, openModal }) => {
   
   const demoLogin = () => {
     const demoUser = { email: 'demo@user.com', password: '123456'}
@@ -12,11 +12,11 @@ const Greeting = ({ currentUser, logout, login }) => {
 
   const sessionLinks = () => (
     <div className="login-signup">
-      <Link to="/login">Login</Link>
-      &nbsp;or&nbsp;
-      <Link to="/signup">Sign up!</Link>
-      &nbsp;or&nbsp;
       <button onClick={demoLogin}>Demo Login</button>
+      &nbsp; &nbsp;
+      <button onClick={() => openModal('login')}>Login</button>
+      &nbsp; &nbsp;
+      <button onClick={() => openModal('signup')}>Signup</button>
     </div>
   );
 
