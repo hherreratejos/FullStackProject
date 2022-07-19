@@ -44,38 +44,45 @@ class SignupForm extends React.Component{
   render() {
     return (
       <div className="login-form-container">
+        <h2>Please Signup!</h2>
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to BarnB!
+        <h1>Welcome to BarnB!</h1>
           <br/>
           {this.renderErrors()}
           <div className="login-form">
-            <label>First name:
+            <label>
               <input type="text"
               value={this.state.fname}
-              onChange={this.update('fname')} />
+              onChange={this.update('fname')} 
+              placeholder='First name'
+              />
             </label>
             <br />
-            <label>Last name:
+            <label>
               <input type="text"
               value={this.state.lname}
-              onChange={this.update('lname')} />
+              onChange={this.update('lname')} 
+              placeholder='Last name'
+              />
             </label>
             <br />
-            <label>Email:
+            <label>
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
+                placeholder='Email'
               />
             </label>
             <br/>
-            <label>Password:
+            <label>
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
+                placeholder='Password'
               />
             </label>
             <br />
-            <input className="session-submit" type="submit" value={this.props.formType} />
+            <input className="session-submit btn" type="submit" value={this.props.formType} />
           </div>
         </form>
       </div>

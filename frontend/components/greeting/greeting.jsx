@@ -12,18 +12,18 @@ const Greeting = ({ currentUser, logout, login, openModal }) => {
 
   const sessionLinks = () => (
     <div className="login-signup">
-      <button onClick={demoLogin}>Demo Login</button>
+      <button className='btn' onClick={demoLogin}>Demo Login</button>
       &nbsp; &nbsp;
-      <button onClick={() => openModal('login')}>Login</button>
+      <button className='btn' onClick={() => openModal('login')}>Login</button>
       &nbsp; &nbsp;
-      <button onClick={() => openModal('signup')}>Signup</button>
+      <button className='btn' onClick={() => openModal('signup')}>Signup</button>
     </div>
   );
 
   const personalGreeting = () => (
     <div className="header-group">
       <h2 className="header-name">Hi, {currentUser.fname} {currentUser.lname}!</h2>
-      <button className="header-button" onClick={logout}>Log Out</button>
+      <button className="btn" onClick={logout}>Log Out</button>
     </div>
   );
   return currentUser ? personalGreeting() : sessionLinks();

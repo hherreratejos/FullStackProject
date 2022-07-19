@@ -47,7 +47,7 @@
 }
 
 .modal-background {
-  position: relative;
+  position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
@@ -60,8 +60,18 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  height: 400px;
+  width: 200px;
   transform: translate(-50%, -50%);
-  background: white;
+  background-color: #fff;
+
+}
+
+.login-form-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 
@@ -75,21 +85,6 @@
   right: 2vw;
 }
 
-.login-signup button{
-  color: white;
-  background-color: rgba(255, 56, 92, 1);
-  border: none;
-  border-radius: 5%;
-  cursor: pointer;
-}
-
-.header-button{
-  color: white;
-  background-color: rgba(255, 56, 92, 1);
-  border: none;
-  border-radius: 5%;
-  cursor: pointer;
-}
 
 .index-img{
   border: none;
@@ -101,7 +96,7 @@
 
 .listing-show{
   margin-top: 10vh;
-  width: 80vw;
+  width: 74vw;
   display: flex;
 }
 
@@ -112,12 +107,83 @@
 }
 
 .listing-show-img{
-  width: 80vw;
+  width: 74vw;
   height: 300px;
-  background-color: lightslategray;
+  border-radius: 3%;
+  display: flex;
 }
 
 #title{
-  font-weight: bold;
-  font-size: 15px;
+  font-weight: 900;
+  color: black;
+  font-size: 18px;
+}
+
+.show-description{
+  height: 400px;
+  width: 34vw;
+  /* border: 1px solid black; */
+  left: 12vw;
+  padding-top: 3px;
+}
+
+.calendar{
+  height: auto;
+  width: 30vw;
+  border: 1px solid black;
+  right: 38px;
+  padding: 10px;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.extra-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+
+.img-container1{
+  width: 34vw;
+  height: 300px;
+  border-radius: 3%;
+  border: 1px solid #fff;
+}
+
+.img-container2{
+  height: 150px;
+  width: 17vw;
+  border-radius: 3%;
+  border: 1px solid #fff;
+}
+
+
+
+.second-image-container{
+  width: 304px;
+  height: 300px;
+  display: flex;
+}
+
+.calendar-inputs{
+  display: flex;
+  border: 1px solid black;
+  border-radius: 5%;
+}
+
+.checkin{
+  border-right: 1px solid black;
+}
+.input{
+  padding: 2px;
+}
+
+.btn{
+  color: white;
+  background-color: rgba(255, 56, 92, 1);
+  border: none;
+  border-radius: 5%;
+  cursor: pointer;
 }
