@@ -161,10 +161,11 @@
 
 
 
-.second-image-container{
-  width: 304px;
+.second-img-container{
+  width: 34vw;
   height: 300px;
   display: flex;
+  /* flex-wrap: wrap; */
 }
 
 .calendar-inputs{

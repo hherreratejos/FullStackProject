@@ -36,11 +36,13 @@ class ListingShow extends React.Component{
             <br />
             <div className='listing-show-img'>
               <div style={divStyle1} className='img-container1'></div>
-              <div className='second-img-container'>
+              <div>
                 <div style={divStyle2} className='img-container2'></div>
                 <div style={divStyle3} className='img-container2'></div>
-                {/* <div style={divStyle4} className='img-container2'></div> */}
-                {/* <div style={divStyle5} className='img-container2'></div> */}
+              </div>
+              <div>
+                <div style={divStyle4} className='img-container2'></div> 
+                <div style={divStyle5} className='img-container2'></div>
               </div>
             </div>
             <br />
