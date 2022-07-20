@@ -36,4 +36,10 @@ class User < ApplicationRecord
   def ensure_session_token
     self.session_token ||= SecureRandom::urlsafe_base64
   end
+
+  has_many :bookings,
+    primary_key: :id,
+    foreign_key: :guest_id,
+    class_name: :Booking
+    
 end

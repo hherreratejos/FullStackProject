@@ -84,7 +84,6 @@ l4f3 = URI.open('https://barnb-dev.s3.us-west-1.amazonaws.com/mansion3.jpg')
 l4f4 = URI.open('https://barnb-dev.s3.us-west-1.amazonaws.com/mansion4.jpg')
 l4f5 = URI.open('https://barnb-dev.s3.us-west-1.amazonaws.com/mansion5.png')
 
-
 casa1 = URI.open('https://barnb-dev.s3.us-west-1.amazonaws.com/casa1.jpg')
 casa2 = URI.open('https://barnb-dev.s3.us-west-1.amazonaws.com/casa2.jpg')
 casa3 = URI.open('https://barnb-dev.s3.us-west-1.amazonaws.com/casa3.jpg')
