@@ -5,6 +5,7 @@ import ListingShowContainer from "./listing/listing_show_container";
 import { Route, Switch } from 'react-router-dom'
 import ListingIndexContainer from './listing/listing_index_container'
 import Modal from './modals/modal'
+import BookingIndexContainer from './booking/booking_index_container'
 
 const App = () => (
   <div>
@@ -21,6 +22,7 @@ const App = () => (
     </div>
     <Switch>
       <Route exact path='/listings/:id' component={ListingShowContainer}/>
+      <Route exact path='/bookings/:userId' component={BookingIndexContainer}/>
       <Route exact path="/" component={ListingIndexContainer} />
     </Switch>
   </div>

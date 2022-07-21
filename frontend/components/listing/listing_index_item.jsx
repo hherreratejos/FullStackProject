@@ -20,8 +20,6 @@ class IndexItem extends React.Component{
       }>
         <img className='index-img' src={photoUrls[0]} />
         <p>{address}, {state}</p>
-        <br />
-        <br />
         <div className='listing-price'>${price}/night</div>
       </div>
     )

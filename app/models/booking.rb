@@ -1,6 +1,6 @@
 class Booking < ApplicationRecord
   validates :startdate, :enddate, :nguests, :guest_id, :listing_id, presence: true
-  validates :guest_id, :listing_id, uniqueness: true
+  validates :guest_id, uniqueness: { scope: :listing_id }
 
   belongs_to :user,
     primary_key: :id,

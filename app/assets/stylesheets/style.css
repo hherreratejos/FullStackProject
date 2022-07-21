@@ -11,6 +11,10 @@
   top: 0;
 }
 
+.header-name{
+  font-size: 22px;
+}
+
 .header-bar{
   left: 10px;
   right: 10px;
@@ -20,6 +24,17 @@
   justify-content: space-between;
   align-content: center;
   align-items: center;
+}
+
+.header-group{
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.header-group button{
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .listings{
@@ -37,13 +52,19 @@
   font-size: 11px;
   font-weight: bold;
   cursor: pointer;
-  height: 220px;
   width: 200px;
+}
+
+.listing img{
+  border: 2px solid #fff;
 }
 
 .listing-index{
   padding: 2px;
+  width: 84vw;
+  height: auto;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .modal-background {
@@ -80,6 +101,11 @@
   color: rgba(255, 56, 92, 1);
 }
 
+.barnb:hover{
+  text-decoration: none;
+  color: rgba(255, 56, 92, 1);
+}
+
 .greeting{
   left: 2vw;
   right: 2vw;
@@ -89,7 +115,7 @@
 .index-img{
   border: none;
   height: 200px;
-  width: 200px;
+  width: 190px;
   background-color: darkgray;
   border-radius: 5%;
 }
@@ -130,12 +156,12 @@
 .calendar{
   height: auto;
   width: 24vw;
-  border: 1px solid black;
   right: 42px;
   padding: 8px;
   flex-direction: column;
   display: flex;
   justify-content: flex-start;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6)
 }
 
 .extra-container{
@@ -152,6 +178,7 @@
   border-radius: 3%;
   border-right: 3px solid #fff;
   padding-bottom: 8px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
 }
 
 .img-container2{
@@ -159,9 +186,8 @@
   width: 17vw;
   border-radius: 3%;
   border: 3px solid #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
 }
-
-
 
 .second-img-container{
   width: 34vw;
@@ -189,4 +215,78 @@
   border: none;
   border-radius: 5%;
   cursor: pointer;
+
+}
+
+.dropbtn {
+  background-color: #fff;
+  color: #484848;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content div {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content div:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #07070710;
+}
+
+.dropbtn i{
+  color: #484848;
+}
+
+.login-signup{
+  display: flex;
+  align-items: center;
+}
+
+.demo-login{
+  height: 100%;
+  width: 100px;
+  padding: 10px;
+}
+
+.demo-login:hover{
+  background-color: #0c0c0c14;
+}
+
+.bookings{
+  margin-top: 12vh;
+  display: flex;
+  justify-content: center;
+}
+
+.booking-index{
+  width: 80vw;
+}
+
+.booking-index-item{
+  border: 1px #484848 solid;
 }
