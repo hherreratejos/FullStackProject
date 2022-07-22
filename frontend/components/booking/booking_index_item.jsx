@@ -16,11 +16,15 @@ class BookingIndexItem extends React.Component{
     return(
       <div className="booking-index-item">
         <div className="booking-index-img"></div>
-        <p>Checkin: {startdate}</p>
-        <p>Cheackout: {enddate}</p>
-        <p>Number of guests: {nguests}</p><br />
-        <Link to={`/bookings/${id}/edit`}>Edit</Link>
-        <Link to={`/booking/delete/${id}`}>Delete</Link>
+        <div className="booking-info">
+          <p>Checkin: {startdate}</p>
+          <p>Checkout: {enddate}</p>
+          <p>Number of guests: {nguests}</p><br />
+        </div>
+        <div className="booking-index-btns">
+          <Link className="btn bii-btn" to={`/bookings/${id}/edit`}>Edit</Link>
+          <Link className='btn bii-btn' to={`/booking/delete/${id}`}>Delete</Link>
+        </div>
       </div>
     )
   }
