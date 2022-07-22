@@ -17,6 +17,12 @@ class BookingShow extends React.Component{
         <p>{startdate}</p>
         <p>{enddate}</p>
         <p>{nguests}</p>
+        <p>ShowPage</p>
+        <p>ShowPage</p>
+        <p>ShowPage</p>
+        <p>ShowPage</p>
+        <p>ShowPage</p>
+        <p>ShowPage</p>
       </div>
     )
   }

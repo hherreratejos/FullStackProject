@@ -25,7 +25,7 @@ class ListingShow extends React.Component{
     const booking = Object.assign({}, this.state);
     booking['listing_id'] = this.props.listing.id
     booking['guest_id'] = this.props.currentUser.id
-    this.props.createBooking(booking).then( res => this.props.history.push(`/bookings/${res.booking.id}`))
+    this.props.createBooking(booking).then( () => this.props.history.push(`/bookings/${this.props.currentUser.id}`))
   }
 
   update(field){
@@ -40,9 +40,6 @@ class ListingShow extends React.Component{
 
 
   render (){
-    if (!this.props.listing){
-      return null
-    }
     const {id, title, address, state, city, zipcode, beds, price, photoUrls, description } = this.props.listing
     const divStyle1 = { "backgroundImage": `url(${photoUrls[0]})`,
                         "backgroundSize": '100% 100%' };

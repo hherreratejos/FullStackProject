@@ -31,14 +31,16 @@ export const updateBooking = booking => {
     $.ajax({
       method: 'PATCH',
       url: `/api/bookings/${booking.id}`,
-      booking
+      data: {booking}
     })
   )
 }
 
 export const destroyBooking = bookingId => {
-  return ({
-    method: 'DELETE',
-    url: `/api/bookings/${bookingId}`
-  })
+  return(
+    $.ajax({
+      method: 'DELETE',
+      url: `/api/bookings/${bookingId}`,
+    })
+  )
 }

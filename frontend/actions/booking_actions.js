@@ -52,9 +52,13 @@ export const createBooking = booking => dispatch =>{
 }
 
 export const updateBooking = booking => dispatch =>{
+  return(
   APIUtil.updateBooking(booking).then(booking => dispatch(receiveBooking(booking)))
+  )
 }
 
 export const destroyBooking = id => dispatch =>{
-  APIUtil.destroyBooking(id).then( () => dispatch(removeBooking(id)))
+  return(
+  APIUtil.destroyBooking(id).then( res => dispatch(removeBooking(id)))
+  )
 }

@@ -19,6 +19,7 @@ class BookingIndex extends React.Component{
       booking={booking}
       key={booking.id}
       />
+      
     ))}
     </div>
     )
@@ -35,7 +36,6 @@ class BookingIndex extends React.Component{
   }
 
   render(){
-    console.log('id', this.props.currentUserId)
     const {bookings} = this.props
     if (!bookings){
       return null
