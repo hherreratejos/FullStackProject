@@ -52,11 +52,13 @@
   font-size: 11px;
   font-weight: bold;
   cursor: pointer;
-  width: 200px;
+  width: 19vw;
 }
 
 .listing img{
   border: 2px solid #fff;
+  max-width: 19vw;
+  max-height: 25vh;
 }
 
 .listing-index{
@@ -82,10 +84,11 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 400px;
+  /* height: 400px; */
   width: 240px;
   transform: translate(-50%, -50%);
   background-color: #fff;
+  padding: 10px;
 }
 
 .modal-child h2{
